@@ -35,7 +35,7 @@ function criaProduto(nome){
             return nome;
         },
         set nome(valor){
-            valor = valor.replace('T', 'a')
+            valor = valor.replace('T', 'a' )
             nome = valor;
         }
     }
