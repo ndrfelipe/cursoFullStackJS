@@ -1,6 +1,6 @@
-###Repositório###
+#*Repositório*
 
-##Utilizado para armazenas o conteúdo de JavaScript do curso de desenvolvimento fullstack com Js/Ts.##
+##*Utilizado para armazenas o conteúdo de JavaScript do curso de desenvolvimento fullstack com Js/Ts.*
 
 Conteúdos abordados até o momento:
 - Lógica de programação
