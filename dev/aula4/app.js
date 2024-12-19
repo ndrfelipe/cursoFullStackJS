@@ -4,6 +4,7 @@
 // Fazendo uma recursão mútua (Dependência circular de funções)
 
 const fs = require('fs').promises;
+const { read } = require('fs');
 const path = require('path');
 
 
@@ -26,8 +27,21 @@ async function walk(files, rootDir) {
 
         const fileFullPath = path.resolve(rootDir, file);
         const stats = await fs.stat(fileFullPath);
-        console.log(file, stats.isDirectory());
+
+        if(/\.git/g.test(fileFullPath)) continue;
+        if(/node_modules/g.test(fileFullPath)) continue;
+        
+
+        if(stats.isDirectory()){
+            readdir(fileFullPath);
+            continue;
+        }
+
+       
+        
+
+        console.log(file);
     };
 }
 
-readdir("C:/Users/REEF/javascript-logic/javascript");
+readdir("C:/Users/REEF/javascript-logic/dev");
