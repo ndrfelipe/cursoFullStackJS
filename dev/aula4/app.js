@@ -30,4 +30,4 @@ async function walk(files, rootDir) {
     };
 }
 
-readdir("C:/Users/REEF/javascript-logic/javascript");
+readdir("C:/Users/André Felipe/dev/cursoFullStackJS/javascript/");
