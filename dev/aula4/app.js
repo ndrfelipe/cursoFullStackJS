@@ -44,4 +44,8 @@ async function walk(files, rootDir) {
     };
 }
 
+<<<<<<< HEAD
 readdir("C:/Users/REEF/javascript-logic/dev");
+=======
+readdir("C:/Users/André Felipe/dev/cursoFullStackJS/javascript/");
+>>>>>>> 9d96ef1f0698247b03254b5c01e13140a9cd391f
