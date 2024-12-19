@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "username": "ndrfelipe",
+    "password": "1123as23",
+    "email": "andre@gmail.com"
+  },
+  {
+    "id": 2,
+    "username": "alejandre",
+    "password": "12Ac3",
+    "email": "alejandre@gmail.com"
+  },
+  {
+    "id": 3,
+    "username": "clarinha",
+    "password": "adfas2134",
+    "email": "clacla@hotmail.com"
+  },
+  {
+    "id": 4,
+    "username": "jon",
+    "password": "AAbbCC123",
+    "email": "jon@ufrpe.br"
+  }
+]
