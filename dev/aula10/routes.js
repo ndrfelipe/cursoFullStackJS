@@ -1,7 +1,7 @@
 const express = require("express");
 const route = express.Router();
-const homeController = require('./controllers/homeController');
-const agendamentoController = require('./controllers/agendamentoController');
+const homeController = require('./src/controllers/homeController');
+const agendamentoController = require('./src/controllers/agendamentoController');
 
 route.get('/', homeController.paginaInicial);
 route.post('/', homeController.trataPost);
