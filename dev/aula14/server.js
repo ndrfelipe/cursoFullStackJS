@@ -8,7 +8,6 @@ const mongoose = require('mongoose');
 
 mongoose.connect(process.env.CONNECTIONSTRING)
     .then(() =>{
-        console.log("Conexão realizada com sucesso.")
         app.emit('ready');
     })
     .catch(e => console.log(e));
