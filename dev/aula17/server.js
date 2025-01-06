@@ -19,12 +19,13 @@ const flash = require('connect-flash');
 const helmet = require('helmet');
 const csrf = require('csurf');
 
-app.use(express.urlencoded( {extended: true} ));
 app.use(helmet());
+app.use(express.urlencoded( {extended: true} ));
+app.use(express.json());
 app.use(express.static(path.resolve(__dirname, 'public')));
 
 const sessionOptions = session({
-    secret: 'aula 17',
+    secret: 'projetos',
     store: new MongoStore({ mongoUrl: process.env.CONNECTIONSTRING }),
     saveUninitialized: false,
     resave: false,
@@ -33,20 +34,19 @@ const sessionOptions = session({
         httpOnly: true
     }
 });
-
 app.use(sessionOptions);
 app.use(flash())
+
 app.set('views', path.resolve(__dirname, 'src', 'views'));
 app.set('view engine', 'ejs');
 app.use(csrf());
-app.use(middlewareGlobal);
-app.use(checkCsrfError, csrfMiddleware);
+app.use(middlewareGlobal, checkCsrfError, csrfMiddleware);
 app.use(routes);
 
 app.on('ready', ()=>{
     app.listen(3000, () =>{
-        console.log("http://localhost:3000")
-        console.log("Servidor rodando na porta 3000")
+        console.log("http://localhost:3000");
+        console.log("Servidor rodando na porta 3000");
     });
 });
 
